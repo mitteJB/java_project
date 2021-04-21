@@ -56,10 +56,10 @@ public class ManagerFxController extends BorderPane {
     private Button latesEmpsBtn;
 
     private final Node rootIcon2 = new ImageView(
-            new Image(getClass().getResourceAsStream("image/book2.png"))
-    );
+            new Image(getClass().getResourceAsStream("/image/text_snippet.png"))
+        );
     private final Node rootIcon3 = new ImageView(
-            new Image(getClass().getResourceAsStream("image/book3.png"))
+            new Image(getClass().getResourceAsStream("/image/topic.png"))
     );
     //private Executor exec;
 

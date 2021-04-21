@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
@@ -446,6 +447,11 @@ public class EmployUpdateFxController extends BorderPane{
 	        alert.setHeaderText("필수입력란 공백발생");
 	        alert.setContentText("필수입력란을 확인하십시오.");
 	        alert.show();
+	        
+	        ImageView icon = new ImageView("/image/report_black.png");
+	         icon.setFitHeight(40);
+	         icon.setFitWidth(40);
+	         alert.setGraphic(icon);
 	    }
 	    
 	    
@@ -456,6 +462,11 @@ public class EmployUpdateFxController extends BorderPane{
 	    	alert.setTitle("Confirmation Dialog");
 	    	alert.setHeaderText("사원정보를 수정하시겠습니까?");
 	    	alert.setContentText("정말 수정하시겠습니까?");
+	    	
+	    	ImageView icon = new ImageView("/image/file_rename.png");
+	         icon.setFitHeight(30);
+	         icon.setFitWidth(30);
+	         alert.setGraphic(icon);
 
 	    	Optional<ButtonType> result = alert.showAndWait();
 	    	if (result.get() != ButtonType.OK){
@@ -544,6 +555,12 @@ public class EmployUpdateFxController extends BorderPane{
 	    	alert.setTitle("Confirmation Dialog");
 	    	alert.setHeaderText("사원정보를 삭제하시겠습니까?");
 	    	alert.setContentText("정말 삭제하시겠습니까?");
+	    	
+	    	ImageView icon = new ImageView("/image/person_remove(2).png");
+	         icon.setFitHeight(30);
+	         icon.setFitWidth(30);
+	         alert.setGraphic(icon);
+	         
 	    	Optional<ButtonType> result = alert.showAndWait();
 	    	if (result.get() != ButtonType.OK){
 	    	   return;

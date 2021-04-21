@@ -24,6 +24,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import sample.dto.Department;
@@ -458,6 +459,11 @@ public class EmployeeSearchFxController extends BorderPane {
         alert.setHeaderText("필수입력란 공백발생");
         alert.setContentText("필수입력란을 확인하십시오.");
         alert.show();
+        
+        ImageView icon = new ImageView("/image/report_black.png");
+        icon.setFitHeight(40);
+        icon.setFitWidth(40);
+        alert.setGraphic(icon);
     }
 
 
@@ -469,6 +475,11 @@ public class EmployeeSearchFxController extends BorderPane {
         alert.setHeaderText("사원정보를 추가하시겠습니까?");
         alert.setContentText("정말 추가하시겠습니까?");
 
+        ImageView icon = new ImageView("/image/group_add.png");
+        icon.setFitHeight(30);
+        icon.setFitWidth(30);
+        alert.setGraphic(icon);
+        
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() != ButtonType.OK) {
             return;

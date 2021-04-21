@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tab;
@@ -110,6 +111,16 @@ public class MainHrFXController {
           alert.setTitle(systemver);
           alert.setHeaderText("인사 관리 시스템 "+ PTS.toDate3(new Date()));
           alert.setContentText("인사관리시스템은 부서관리, 사원관리, 인사정보를 관리 하는 시스템입니다.");
+          
+          ImageView icon = new ImageView("/image/outline_cloud_circle.png");
+
+          // The standard Alert icon size is 48x48, so let's resize our icon to match
+          icon.setFitHeight(40);
+          icon.setFitWidth(40);
+
+          // Set our new ImageView as the alert's icon
+          alert.setGraphic(icon);
+          
           alert.show();
           mainTabPane.setVisible(true);    
     }
@@ -121,6 +132,12 @@ public class MainHrFXController {
     	alert.setTitle(systemver);
         alert.setHeaderText("인사 관리 시스템("+PTS.toDate3(new Date())+")을 끝내시겠습니까?");
     	alert.setContentText("정말 끝내시겠습니까?");
+    	
+    	ImageView icon = new ImageView("/image/logout_black.png");
+        icon.setFitHeight(30);
+        icon.setFitWidth(30);
+        alert.setGraphic(icon);
+    	
     	Optional<ButtonType> result = alert.showAndWait();
     	if (result.get() == ButtonType.OK){
     		Platform.exit();
@@ -139,7 +156,11 @@ public class MainHrFXController {
           		+ "\n 실행은 '시작/종료'를 선택하십시오."
           		+ "\n"
           		+ "\n 				JB Corp.");
-          alert.show();
+          
+          ImageView icon = new ImageView("/image/emoji_people.png");
+          icon.setFitHeight(40);
+          icon.setFitWidth(40);
+          alert.setGraphic(icon);
     }
 
     // 메뉴에서 각 탭명을 선택하면 탭이 변환되도록 하는 메서드
