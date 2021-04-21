@@ -78,7 +78,7 @@ public class PieChartController extends BorderPane{
  		   //final int  ftotal=total;   
  			
  			PieChart pieChart = new PieChart();
- 			pieChart.setTitle("부서별 인원수 총"+total+"명 " + PTS.toDay());
+ 			pieChart.setTitle("부서별 사원수 / 총"+total+"명 " + PTS.toDay());
  	        pieChart.setData(getChartData(dlists));
  	        pieChart.setClockwise(true); 
  	        pieChart.setStartAngle(180);  

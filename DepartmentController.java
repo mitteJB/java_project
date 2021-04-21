@@ -145,7 +145,7 @@ public DepartmentController(EmployeeService service) {
     @SuppressWarnings("unchecked")
    	public void loadTreeItems() {
     	 ObservableList<Department> dlists=null;
-    	    TreeItem<String> root = new TreeItem<String>("부서별 직원",rootIcon0);
+    	    TreeItem<String> root = new TreeItem<String>("부서별 사원정보",rootIcon0);
     	    root.setExpanded(true);
    		try {
 			dlists=service.findAllDepartments();
@@ -162,7 +162,7 @@ public DepartmentController(EmployeeService service) {
    					 }
    					 empData = service.findEmployeesByDepartName( val);
    					 //---------------필요 없다면 
-   					 String stsf=val+" 부서직원수: ";
+   					 String stsf=val+" 부서 인원 : ";
    					 showLabel(stsf+empData.size()+" 명");
  					 //---------------
    					showToTableEmployees(empData);
@@ -195,7 +195,7 @@ public DepartmentController(EmployeeService service) {
         	ObservableList<Employee> empData=service.findAllEmployees ();
             // show Employees on TableView
         	showToTableEmployees(empData);
-            showLabel("Employees 총 :"+empData.size()+"명");
+            showLabel("총 인원 : "+empData.size()+"명");
         } catch (SQLException e){
             System.out.println("employeeDAO.findAllEmployees() 에서 예외 발생.\n" + e);
             //throw e;

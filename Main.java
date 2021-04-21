@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 import sample.model.EmployeeService;
-
+// test 주석
 public class Main extends Application {
     private Stage primaryStage;
     private BorderPane root;

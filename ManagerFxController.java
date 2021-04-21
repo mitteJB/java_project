@@ -137,7 +137,7 @@ public class ManagerFxController extends BorderPane {
     //TreeItem<String> one;
     @SuppressWarnings("unchecked")
     public void loadTreeItems() {
-        TreeItem<String> root = new TreeItem<String>("매니저와 직원", rootIcon2);
+        TreeItem<String> root = new TreeItem<String>("관리자별 사원정보", rootIcon2);
         root.setExpanded(true);
         try {
 

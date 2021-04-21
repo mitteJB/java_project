@@ -108,8 +108,8 @@ public class MainHrFXController {
     void onStartAction(ActionEvent event) {
     	  Alert alert = new Alert (AlertType.INFORMATION);
           alert.setTitle(systemver);
-          alert.setHeaderText("인사관리 시스템 "+ PTS.toDate3(new Date()));
-          alert.setContentText("인사관리시스템은 부서관리, 관리자관리, 인사에 관련된 입력/수정을 하는 시스템입니다.");
+          alert.setHeaderText("인사 관리 시스템 "+ PTS.toDate3(new Date()));
+          alert.setContentText("인사관리시스템은 부서관리, 사원관리, 인사정보를 관리 하는 시스템입니다.");
           alert.show();
           mainTabPane.setVisible(true);    
     }
@@ -119,7 +119,7 @@ public class MainHrFXController {
     void onExitAction(ActionEvent event) {
     	Alert alert = new Alert(AlertType.CONFIRMATION);
     	alert.setTitle(systemver);
-        alert.setHeaderText("인사관리 시스템("+PTS.toDate3(new Date())+")을 끝내시겠습니까?");
+        alert.setHeaderText("인사 관리 시스템("+PTS.toDate3(new Date())+")을 끝내시겠습니까?");
     	alert.setContentText("정말 끝내시겠습니까?");
     	Optional<ButtonType> result = alert.showAndWait();
     	if (result.get() == ButtonType.OK){
@@ -133,10 +133,12 @@ public class MainHrFXController {
     void onHelpAction(ActionEvent event) {
     	  Alert alert = new Alert (AlertType.INFORMATION);
           alert.setTitle(systemver);
-          alert.setHeaderText("인사관리 시스템 "+PTS.toDate3(new Date()));
-          alert.setContentText("안녕하세요 "+systemver+"입니다. "
-          		+ "\n인사관리시스템은 부서관리, 관리자관리, 인사에 관련된 입력/수정을 하는 시스템입니다."
-          		+ "\n 시작은 시작메뉴를 선택하십시오.");
+          alert.setHeaderText("인사 관리 시스템 "+PTS.toDate3(new Date()));
+          alert.setContentText(" 안녕하세요 "+systemver+"입니다. "
+          		+ "\n 인사관리시스템은 부서관리, 관리자관리, 인사에 관련된 입력/수정을 하는 시스템입니다."
+          		+ "\n 실행은 '시작/종료'를 선택하십시오."
+          		+ "\n"
+          		+ "\n 				JB Corp.");
           alert.show();
     }
 

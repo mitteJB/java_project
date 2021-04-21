@@ -442,9 +442,9 @@ public class EmployUpdateFxController extends BorderPane{
 	    
 	    public void handleHelp() {
 	        Alert alert = new Alert (AlertType.INFORMATION);
-	        alert.setTitle("필수요소를 꼭 입력하십시오.");
-	        alert.setHeaderText("필수요소확인");
-	        alert.setContentText("필수요소를 꼭 입력하세요. 필수요소는 파란색입니다..");
+	        alert.setTitle("Blank space occurs");
+	        alert.setHeaderText("필수입력란 공백발생");
+	        alert.setContentText("필수입력란을 확인하십시오.");
 	        alert.show();
 	    }
 	    
@@ -454,7 +454,7 @@ public class EmployUpdateFxController extends BorderPane{
 	    void actionUpdateEmployee(ActionEvent event) {
 	    	Alert alert = new Alert(AlertType.CONFIRMATION);
 	    	alert.setTitle("Confirmation Dialog");
-	    	alert.setHeaderText("직원의 정보를 수정하시겠습니까?");
+	    	alert.setHeaderText("사원정보를 수정하시겠습니까?");
 	    	alert.setContentText("정말 수정하시겠습니까?");
 
 	    	Optional<ButtonType> result = alert.showAndWait();
@@ -542,8 +542,8 @@ public class EmployUpdateFxController extends BorderPane{
 	    	
 	    	Alert alert = new Alert(AlertType.CONFIRMATION);
 	    	alert.setTitle("Confirmation Dialog");
-	    	alert.setHeaderText("직원의 정보를 삭제하시겠습니까?");
-	    	alert.setContentText("정말 수정하시겠습니까?");
+	    	alert.setHeaderText("사원정보를 삭제하시겠습니까?");
+	    	alert.setContentText("정말 삭제하시겠습니까?");
 	    	Optional<ButtonType> result = alert.showAndWait();
 	    	if (result.get() != ButtonType.OK){
 	    	   return;

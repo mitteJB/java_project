@@ -39,7 +39,7 @@
                 <TreeView fx:id="tvEmp" prefHeight="680.0" prefWidth="300.0" BorderPane.alignment="CENTER" />
             </center>
             <top>
-                <Button fx:id="latesEmpsBtn" mnemonicParsing="false" onAction="#onLatesEmpsBtn" prefHeight="30.0" prefWidth="298.0" text="관리자별직원확인" BorderPane.alignment="CENTER" />
+                <Button fx:id="latesEmpsBtn" mnemonicParsing="false" onAction="#onLatesEmpsBtn" prefHeight="30.0" prefWidth="298.0" text="최신 직원 관계" BorderPane.alignment="CENTER" />
             </top>
         </BorderPane>
     </left>
