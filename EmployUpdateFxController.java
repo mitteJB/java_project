@@ -448,7 +448,7 @@ public class EmployUpdateFxController extends BorderPane{
 	        alert.setContentText("필수입력란을 확인하십시오.");
 	        alert.show();
 	        
-	        ImageView icon = new ImageView("/image/report_black.png");
+	        ImageView icon = new ImageView("sample/image/report_black.png");
 	         icon.setFitHeight(40);
 	         icon.setFitWidth(40);
 	         alert.setGraphic(icon);
@@ -463,7 +463,7 @@ public class EmployUpdateFxController extends BorderPane{
 	    	alert.setHeaderText("사원정보를 수정하시겠습니까?");
 	    	alert.setContentText("정말 수정하시겠습니까?");
 	    	
-	    	ImageView icon = new ImageView("/image/file_rename.png");
+	    	ImageView icon = new ImageView("sample/image/file_rename.png");
 	         icon.setFitHeight(30);
 	         icon.setFitWidth(30);
 	         alert.setGraphic(icon);
@@ -556,7 +556,7 @@ public class EmployUpdateFxController extends BorderPane{
 	    	alert.setHeaderText("사원정보를 삭제하시겠습니까?");
 	    	alert.setContentText("정말 삭제하시겠습니까?");
 	    	
-	    	ImageView icon = new ImageView("/image/person_remove(2).png");
+	    	ImageView icon = new ImageView("sample/image/person_remove.png");
 	         icon.setFitHeight(30);
 	         icon.setFitWidth(30);
 	         alert.setGraphic(icon);

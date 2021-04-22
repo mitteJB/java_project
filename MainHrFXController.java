@@ -112,7 +112,7 @@ public class MainHrFXController {
           alert.setHeaderText("인사 관리 시스템 "+ PTS.toDate3(new Date()));
           alert.setContentText("인사관리시스템은 부서관리, 사원관리, 인사정보를 관리 하는 시스템입니다.");
           
-          ImageView icon = new ImageView("/image/outline_cloud_circle.png");
+          ImageView icon = new ImageView("sample/image/outline_cloud_circle.png");
 
           // The standard Alert icon size is 48x48, so let's resize our icon to match
           icon.setFitHeight(40);
@@ -133,7 +133,7 @@ public class MainHrFXController {
         alert.setHeaderText("인사 관리 시스템("+PTS.toDate3(new Date())+")을 끝내시겠습니까?");
     	alert.setContentText("정말 끝내시겠습니까?");
     	
-    	ImageView icon = new ImageView("/image/logout_black.png");
+    	ImageView icon = new ImageView("sample/image/logout_black.png");
         icon.setFitHeight(30);
         icon.setFitWidth(30);
         alert.setGraphic(icon);
@@ -157,7 +157,7 @@ public class MainHrFXController {
           		+ "\n"
           		+ "\n 				JB Corp.");
           
-          ImageView icon = new ImageView("/image/emoji_people.png");
+          ImageView icon = new ImageView("sample/image/emoji_people.png");
           icon.setFitHeight(40);
           icon.setFitWidth(40);
           alert.setGraphic(icon);
