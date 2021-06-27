@@ -6,12 +6,10 @@ import java.text.SimpleDateFormat;
 
 public class PTS {
 
-	/* sql.Date를 "yyyy. MM. dd" 형식의 문자열로 변환한다 */
 	public static String toSDate(Date msg){
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy. MM. dd");
 		return sdf.format(msg);
 	}
-	/* "yyyy. MM. dd" 문자열을 sql.Date타입으로 변환 */
 	public static Date toDaeS(String msg){
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy. MM. dd");
 		java.util.Date ud=new java.util.Date();
@@ -22,12 +20,10 @@ public class PTS {
 		}
        return new Date(ud.getTime());
 	}
-	/* "yyyy-MM-dd" 문자열을 sql.Date타입으로 변환 */
 	public static String toSDate2(Date msg){
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 		return sdf.format(msg);
 	}
-	/* "yyyy-MM-dd" 문자열을 util.Date타입으로 변환 */
 	public static String toDate3(java.util.Date msg){
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 		return sdf.format(msg);
