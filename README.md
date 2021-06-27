@@ -1,9 +1,7 @@
 ## 인사관리 자바 프로젝트입니다.
-  jdk 1.8
-  
-  oracle 18c
-  
-  javaFX
+- jdk 1.8
+- oracle 18c  
+- javaFX
   
 ### 기능
   일반사원과 관리자를 구분하여 인사관리 기능
