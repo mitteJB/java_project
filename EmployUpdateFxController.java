@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
@@ -229,11 +228,11 @@ public class EmployUpdateFxController extends BorderPane{
 			//tfjobid.setEditable(b);
 			//tfmanagerid.setEditable(b);
 			if(b){
-				tffirstname.setStyle("-fx-background-color: #968385");
-				tflastname.setStyle("-fx-background-color: #968385");
-				tfemail.setStyle("-fx-background-color: #968385");
-				tfhiredate.setStyle("-fx-background-color: #968385");
-				tfphone.setStyle("-fx-background-color: #968385");
+				tffirstname.setStyle("-fx-background-color: #0000ff");
+				tflastname.setStyle("-fx-background-color: #0000ff");
+				tfemail.setStyle("-fx-background-color: #0000ff");
+				tfhiredate.setStyle("-fx-background-color: #0000ff");
+				tfphone.setStyle("-fx-background-color: #0000ff");
 				tfcommis.setStyle("-fx-background-color: #cccccc");
 				tfsalary.setStyle("-fx-background-color: #cccccc");
 				tfdepartid.setStyle("-fx-background-color: #cccccc");
@@ -377,7 +376,7 @@ public class EmployUpdateFxController extends BorderPane{
 	    	if(cbJobid.getSelectionModel().getSelectedItem()!=null){
 	    		String coms =  cbJobid.getSelectionModel().getSelectedItem().toString();    
 		    	 tfjobid.setText(coms);
-		    	 System.out.println("잡아이디를 선택==========>"+coms);
+		    	 System.out.println("잡아이디을 선택==========>"+coms);
 	    	}
 	    }
 	    //depart(59) ==> 59
@@ -403,7 +402,7 @@ public class EmployUpdateFxController extends BorderPane{
 	    }
 	    //부서콤보에서 부서명으로 관리자 찾기
 	    @FXML
-		void actionDepartClicked(ActionEvent event) {
+	    void actionDepartClicked(ActionEvent event) {
 	    	if(cbdepartid.getSelectionModel().getSelectedItem()!=null){
 	    		String departid =  cbdepartid.getSelectionModel().getSelectedItem().toString();    
 	    		
@@ -443,15 +442,10 @@ public class EmployUpdateFxController extends BorderPane{
 	    
 	    public void handleHelp() {
 	        Alert alert = new Alert (AlertType.INFORMATION);
-	        alert.setTitle("Blank space occurs");
-	        alert.setHeaderText("필수입력란 공백발생");
-	        alert.setContentText("필수입력란을 확인하십시오.");
+	        alert.setTitle("필수요소를 꼭 입력하십시오.");
+	        alert.setHeaderText("필수요소확인");
+	        alert.setContentText("필수요소를 꼭 입력하세요. 필수요소는 파란색입니다..");
 	        alert.show();
-	        
-	        ImageView icon = new ImageView("sample/image/report_black.png");
-	         icon.setFitHeight(40);
-	         icon.setFitWidth(40);
-	         alert.setGraphic(icon);
 	    }
 	    
 	    
@@ -460,13 +454,8 @@ public class EmployUpdateFxController extends BorderPane{
 	    void actionUpdateEmployee(ActionEvent event) {
 	    	Alert alert = new Alert(AlertType.CONFIRMATION);
 	    	alert.setTitle("Confirmation Dialog");
-	    	alert.setHeaderText("사원정보를 수정하시겠습니까?");
+	    	alert.setHeaderText("직원의 정보를 수정하시겠습니까?");
 	    	alert.setContentText("정말 수정하시겠습니까?");
-	    	
-	    	ImageView icon = new ImageView("sample/image/file_rename.png");
-	         icon.setFitHeight(30);
-	         icon.setFitWidth(30);
-	         alert.setGraphic(icon);
 
 	    	Optional<ButtonType> result = alert.showAndWait();
 	    	if (result.get() != ButtonType.OK){
@@ -553,14 +542,8 @@ public class EmployUpdateFxController extends BorderPane{
 	    	
 	    	Alert alert = new Alert(AlertType.CONFIRMATION);
 	    	alert.setTitle("Confirmation Dialog");
-	    	alert.setHeaderText("사원정보를 삭제하시겠습니까?");
-	    	alert.setContentText("정말 삭제하시겠습니까?");
-	    	
-	    	ImageView icon = new ImageView("sample/image/person_remove.png");
-	         icon.setFitHeight(30);
-	         icon.setFitWidth(30);
-	         alert.setGraphic(icon);
-	         
+	    	alert.setHeaderText("직원의 정보를 삭제하시겠습니까?");
+	    	alert.setContentText("정말 수정하시겠습니까?");
 	    	Optional<ButtonType> result = alert.showAndWait();
 	    	if (result.get() != ButtonType.OK){
 	    	   return;

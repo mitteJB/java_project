@@ -21,9 +21,9 @@ public abstract class DataBase {
 	private void init(){
 		try {
 			Class.forName(DRIVER);
-			log("1/6 드라이버 로딩 성공(>_<)");
+			log("1/6 Driver Loading Success!!!");
 		} catch (ClassNotFoundException e) {
-			log("1/6 드라이버 로딩 실패ㅠㅠ");
+			log("1/6 Driver Loading Fail!!!");
 		}//
 	}
 	public void log(String msg){
@@ -105,7 +105,7 @@ public abstract class DataBase {
 				URLS, 
 				USER,
 				PWD);
-		log("2/6 연결성공(>_<)");
+		log("2/6 Connection Success!!!");
 		return conn;
 	}//getConnection
 	public void close(Connection conn, Statement stmt,ResultSet rs){
@@ -126,9 +126,9 @@ public abstract class DataBase {
 		if(conn!=null){
 			try {
 				conn.close();
-				log("6/6 연결해제 성공(>_<)");
+				log("6/6 Close Success!!!");
 			} catch (SQLException e) {
-				log("6/6 연결해제 실패(ㅠ_ㅠ)",e);
+				log("6/6 Close Fail: ",e);
 			}
 		}//
 	}//close
